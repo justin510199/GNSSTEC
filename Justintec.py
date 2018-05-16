@@ -83,7 +83,7 @@ def readOfile(ofile):
         alltimedata.append(satLC)
         satLC = []
     Ofile.close()
-    #計算 satec & srtec
+    # satec & srtec
     B1 = 1575.42*10**6
     B2 = 1227.6*10**6
     m = B1/B2
@@ -103,12 +103,12 @@ def readOfile(ofile):
             sartec.append(B*(L2-B2/B1*L1)/10**16)
             sartecsat.append(sartec)
         sartecall.append(sartecsat)
-    #找出所有衛星
+    #find all satellite
     temp=[]
     for d in range(count):
         temp.extend(allsatnum[d])
         allsatcount = list(set(temp))
-    #計算斜向TEC(每小時取中位數) 
+    #Slant TEC calculation
     allSATEC = []
     for k in range(len(allsatcount)):
         c = allsatcount[k]
@@ -213,7 +213,7 @@ def readOfileb(ofile):
         alltimedata.append(satLC)
         satLC = []
     Ofile.close()
-    #計算 satec & srtec
+    # satec & srtec
     B1 = 1561.089*10**6
     B2 = 1207.14*10**6
     m = B1/B2
@@ -233,12 +233,12 @@ def readOfileb(ofile):
             sartec.append(B*(L2-B2/B1*L1)/10**16)
             sartecsat.append(sartec)
         sartecall.append(sartecsat)
-    #找出所有衛星
+    #find all satellite
     temp=[]
     for d in range(count):
         temp.extend(allsatnum[d])
         allsatcount = list(set(temp))
-    #計算斜向TEC(每小時取中位數) 
+    #Slant TEC calculation
     allSATEC = []
     for k in range(len(allsatcount)):
         c = allsatcount[k]
